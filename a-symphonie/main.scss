@@ -1,0 +1,574 @@
+@font-face {
+    font-family: 'shrikhand.regular';
+    src: url('../Fonts/shrikhand.regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../Fonts/Roboto-Light.ttf');
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$first-font-family: 'shrikhand.regular';
+$second-font-family: 'Roboto-Light';
+
+/* mixins */
+@mixin padding{
+    padding-right: 30px;
+} 
+
+@mixin text-font ($font-family: $second-font-family){
+    font-family: $font-family;
+}
+
+/* reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    font-family: $second-font-family;
+}
+
+/* header */ /* header */ /* header */
+header{
+    display: flex;
+    font-family: $first-font-family, Arial, Helvetica, sans-serif;
+    .arrow{
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        width: 2%;
+        padding-left: 20px;
+    }
+}
+h1{
+    width: 98%;
+    font-size: 60px;
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+    header{
+        .arrow{
+            font-size: 20px;
+        }
+    }
+    h1{
+        font-size: 30px;
+    }
+}
+
+/* main */ /* main */ /* main */
+
+        /* picture */ 
+.pic{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    img{
+        position: relative;
+        bottom: 70px;
+        max-width: 100%;
+    }
+}
+@media screen and ( min-width: 540px) and ( max-width: 700px){
+    .pic{
+        height: 600px;
+    }
+}
+
+/* article */ /* article */ /* article */
+
+            /* title box */
+.section{
+    background-color: #f6f6f6;
+    padding-top: 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    bottom: 30px;
+    .menuTitle{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 30px;
+        height: 60px;
+    }
+}
+h2{
+    font-family: $first-font-family;
+    font-size: 30px;
+}
+
+        /* heart box */
+.logoHeartBox{
+    position: relative;
+    top: 5px;
+    width: 70px;
+}
+.heartLogo{
+    font-size: 30px;
+}
+.ball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 700ms;
+    position: relative;
+    bottom: 59px;
+    right: 30px;
+    &:hover{
+        transform: scale(1);
+        opacity: 1;
+        cursor: pointer;
+    }
+    &_heart{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #9356DC;
+        &--1{ /*circle*/
+            position: relative;
+            z-index: 2;
+            left: 12px;
+            bottom: 6px;
+            background: linear-gradient( #FF79DA, #9356DC);
+        }
+        &--2{ /*carré*/
+            border-radius: 0;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+        &--3{ /*circle*/
+            position: relative;
+            z-index: 3;
+            right: 12px;
+            bottom: 6px;
+            background: linear-gradient(#FF79DA, #9356DC);
+        }
+    }
+}
+@media screen and( max-width: 600px){
+    .section{
+        bottom: 350px;
+    }
+    h2{
+        font-size: 23px;
+    }
+    .menuTitle{
+        margin-bottom: 20px;
+        .logoHeartBox{
+            position: relative;
+            top: 6px;
+            width: 50px;
+            .heartLogo{
+                font-size: 22px;
+            }
+            .ball{
+                right: 34px;
+                bottom: 57px;
+                &_heart{
+                    width: 14px;
+                    height: 14px;
+                    &--1{
+                        left: 10px;
+                        bottom: 4px;
+                    }
+                    &--3{
+                        right: 10px;
+                        bottom: 4px;
+                    }
+                }
+            }    
+        }
+    }
+}
+@media screen and ( min-width: 600px) and ( max-width: 700px){
+    .section{
+        bottom: 300px;
+    }
+    h2{
+        font-size: 28px;
+    }
+}
+@media screen and ( min-width: 700px) and ( max-width: 768px){
+    .section{
+        bottom: 150px;
+    }
+    h2{
+        font-size: 28px;
+    }
+}
+@media screen and( min-width: 768px) and ( max-width: 1000px){
+    .section{
+        bottom: 100px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .menuTitle{
+        margin-bottom: 30px;
+        .logoHeartBox{
+            position: relative;
+            top: 8px;
+            width: 50px;
+            .heartLogo{
+                font-size: 25px;
+            }
+            .ball{
+                right: 33px;
+                bottom: 58px;
+                &_heart{
+                    width: 16px;
+                    height: 16px;
+                    &--1{
+                        left: 11px;
+                        bottom: 5px;
+                    }
+                    &--3{
+                        right: 11px;
+                        bottom: 5px;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+            /* all menus */
+.article{
+    display: flex;
+    justify-content: space-around;
+    height: 450px;
+    width: 100%;
+}
+.boldMeal{
+    font-weight: bold;
+}
+.sizeBoxMeal{
+    width: 300px;
+    h3{
+        width: 50px;
+        border-bottom: 3px #99E2D0 solid;
+        padding-bottom: 20px;
+    }
+    .mealBoxWithoutTitle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.choiceBox{
+    margin-top: 40px;
+    width: 300px;
+    height: 80px;
+    box-shadow: 2px 2px 6px grey;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    animation: box-moving 1200ms;
+    /*délai de 600ms pour une durée d'1s*/
+    &:hover{
+        cursor: pointer;
+        .validateBox{
+            transform: translateX(0px);
+            &--dots{
+                opacity: 1;
+            }
+        }
+        .logo_validate{
+            transform: rotate(1turn);
+        }
+        
+    }
+}
+@keyframes box-moving{
+    0%{
+        transform: translateY(15px); /*remonte de 15px*/
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px); /*reste au bon endroit*/
+        opacity: 1; /*invisible au début puis apparait progressivement*/
+    }
+}
+
+.textBoxMenu{
+    width: 250px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding-top: 20px;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+    .boldMeal{
+        padding-bottom: 7px;
+    }
+}
+.validateBox{
+    display: flex;
+    align-items: flex-end;
+    width: 150px; 
+    position: relative;
+    left: 150px;
+    z-index: 2;
+    transform: translateX(70px);
+    transform-origin: left;
+    transition: all 600ms;
+    &--dots{
+        background-color: white;
+        font-size: 20px;
+        width: 20px;
+        height: 48%;
+        opacity: 0;
+    }
+    &--price{
+        width: 60px;
+        height: 80px;
+        background-color: white;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 16px;
+        font-weight: bold;
+    }
+    &--logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 80px;
+        background-color: #99e2d0;
+        color: white;
+        font-size: 30px;
+    }
+    .logo_validate{
+        transition: transform 600ms;
+    }
+}
+@media screen and ( max-width: 540px){
+    .article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        .sizeBoxMeal{
+            margin-bottom: 50px;
+            .boldMeal{
+                font-size: 17px;
+            }
+        }
+    }
+}
+@media screen and ( min-width: 540px) and ( max-width: 767px){
+    .article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        .sizeBoxMeal{
+            margin-bottom: 50px;
+            width: 400px;
+        }
+    }
+    .choiceBox{
+        width: 400px;
+        .textBoxMenu{
+            font-size: 15px;
+            margin-left: 20px;            
+            .boldMeal{
+                font-size: 17px;
+            }
+        }
+        .validateBox{
+            width: 200px;
+            font-size: 15px;
+            position: relative;
+            left: 200px;
+            transform: translateX(75px);
+            &--dots{
+                width: 50px;
+            }
+            &--price{
+                width: 75px;
+            }
+            &--logo{
+                font-size: 30px;
+                width: 75px;
+            }
+        }
+    }
+
+}
+@media screen and ( min-width: 767px) and ( max-width: 940px){
+    h3{
+        margin-left: 25px;
+    }
+    .choiceBox{
+        width: 240px;
+        .textBoxMenu{
+            font-size: 12px;
+            margin-left: 10px;            
+            .boldMeal{
+                font-size: 15px;
+            }
+        }
+        .validateBox{
+            width: 110px;
+            font-size: 14px;
+            position: relative;
+            left: 130px;
+            transform: translateX(45px);
+            &--dots{
+                width: 20px;
+                height: 54%;
+            }
+            &--price{
+                width: 45px;
+                padding-bottom: 20px;
+
+            }
+            &--logo{
+                font-size: 25px;
+                width: 45px;
+            }
+        }
+    }
+}
+            
+        /* button */
+.btnBox{                
+    @include padding;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+    .btn{
+        width: 150px;
+        height: 40px;
+        margin-right: 40px;
+        background: linear-gradient(#FF79DA, #9356DC);
+        border-radius: 30px;
+        border: #9356DC;
+        box-shadow: 2px 2px 6px grey;
+        color: white;
+        font-family: $second-font-family;
+        font-size: 15px;
+        position: relative;
+        z-index: 1;
+        &:hover{
+            cursor: pointer;
+            &::after{
+            opacity: 1;
+            }
+        }
+        &::after{   /* création d'un nouvel élément */
+            content: "";    /* pour éclaircir au hover */
+            position: absolute;
+            top: 0;        
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            z-index: -1;
+            border-radius: 30px; 
+            box-shadow: 2px 2px 6px rgb(117, 115, 115);
+            background: linear-gradient(lighten(#FF79DA, 5), lighten(#9356DC, 5));
+            transition: opacity 250ms;        
+        }
+    }
+}
+@media screen and( max-width: 767px){
+    .btnBox{
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+
+
+/* footer*/ /* footer*/ /* footer*/
+@mixin sizeFooter{
+    height: 220px;
+    padding-bottom: 20px;
+    position: relative;
+}
+@mixin textFooter{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer{
+    @include padding;
+    padding-left: 30px;
+    padding-top: 20px;
+    height: 120px;
+    background-color: #353535;
+    .titleFooter{
+        font-family: $first-font-family;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .textBox{
+        display: flex;
+        justify-content: space-between;
+    }
+    .boxLogo{
+        display: flex;
+    }
+    .colorText{
+        color: white;
+        margin-right: 10px;
+    }
+    .uniqueLogo{
+        font-size: 20px;
+        margin-right: 15px;
+    }
+}
+@media screen and( max-width: 600px){
+    footer{
+        @include sizeFooter;
+        bottom: 350px;
+        .textBox{
+            @include textFooter;
+        }
+    }
+}
+@media screen and ( min-width: 600px) and ( max-width: 700px){
+    footer{
+        @include sizeFooter;
+        bottom: 300px;
+        .textBox{
+            @include textFooter;
+        }
+    }
+}
+@media screen and ( min-width: 700px) and ( max-width: 767px){
+    footer{
+        @include sizeFooter;
+        bottom: 150px;
+        .textBox{
+            @include textFooter;
+        }
+    }
+}
+@media screen and ( min-width: 767px) and ( max-width: 1000px){
+    footer{
+        position: relative;
+        bottom: 60px;
+        height: 200px;
+    }
+}
