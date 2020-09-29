@@ -3,168 +3,180 @@
     <head>
         <title>Ohmyfood</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/525d9b07b6.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <!-- header -->
-        <header>
-            <p class="headerTitle">Ohmyfood</p>        
-            <div>
-                <input class="search" type="text" value="Paris, 16ème">
-            </div>
-        </header>
+        <div class="threeSecondsAfter">
+            <!-- header -->
+            <header>
+                <p class="headerTitle">Ohmyfood</p>        
+                <div class="inputBox">
+                    <input class="search" type="text" placeholder="Paris, 16ème">
+                </div>
+            </header>
 
-        <!-- section 1 -->
-        <section class="explainSection">
-            <div class="explainSection_button">
-                <div class="introText">
-                    <h1>Réservez votre menu à l'avance.</h1>
-                    <p>Mettez les pieds sous la table, vous êtes servi!</p>
-                    <p>Les meilleurs des restaurants, rien que pour vous</p>
-                </div>
-                <div class="btnBox">
-                    <button class="btn">Découvrez nos restaurants!</button>
-                </div>
-            </div>
-        <!-- aside -->
-            <aside class="explainSection_text">
-                <h2>Comment ça marche</h2>
-                <div class="explainPart">
-                    <p class="explainPart--list">1</p>
-                    <p class="explainPart--logo"><i class="fas fa-mobile-alt"></i></p>
-                    <p class="explainPart--title">Choisis un restaurant</p>
-                </div>
-                <div class="explainPart">
-                    <p class="explainPart--list">2</p>
-                    <p class="explainPart--logo"><i class="fas fa-list-ul"></i></p>
-                    <p class="explainPart--title">Crée ton menu</p>
-                </div>
-                <div class="explainPart">
-                    <p class="explainPart--list">3</p>
-                    <p class="explainPart--logo"><i class="fas fa-store"></i></p>
-                    <p class="explainPart--title">Pars en profiter au restaurant</p>
-                </div>
-            </aside>
-        </section>
-        
-        <!-- section 2 -->
-        <section class="sectionRestaurant">
-            <h3>Restaurants</h3>
-            <div class="allBoxes">
-                        <!-- restaurant 1 -->
-                <a class="boxRestaurant" href="">
-                    <div class="boxRestaurant_pic">
-                        <div class="picsBox">
-                            <img class="pictures" src="images/bastille.jpg" alt="restaurant-bastille">
-                        </div>
+            <!-- section 1 -->
+            <section class="explainSection">
+                <div class="explainSection_button">
+                    <div class="introText">
+                        <h1>Réservez votre menu à l'avance.</h1>
+                        <p>Mettez les pieds sous la table, vous êtes servi!</p>
+                        <p>Les meilleurs des restaurants, rien que pour vous</p>
                     </div>
-                    <div class="titleAndLike">
-                        <div>
-                            <p class="restaurantName">Bastille</p>
-                            <p>Paris,11ème</p>
+                    <div class="btnBox">
+                        <button class="btn">Découvrez nos restaurants!</button>
+                    </div>
+                </div>
+            <!-- aside -->
+                <aside class="explainSection_text">
+                    <h2>Comment ça marche</h2>
+                    <div class="explainPart">
+                        <p class="explainPart--list">1</p>
+                        <p class="explainPart--logo"><i class="fas fa-mobile-alt"></i></p>
+                        <p class="explainPart--title">Choisis un restaurant</p>
+                    </div>
+                    <div class="explainPart">
+                        <p class="explainPart--list">2</p>
+                        <p class="explainPart--logo"><i class="fas fa-list-ul"></i></p>
+                        <p class="explainPart--title">Crée ton menu</p>
+                    </div>
+                    <div class="explainPart">
+                        <p class="explainPart--list">3</p>
+                        <p class="explainPart--logo"><i class="fas fa-store"></i></p>
+                        <p class="explainPart--title">Pars en profiter au restaurant</p>
+                    </div>
+                </aside>
+            </section>
+            
+            <!-- section 2 -->
+            <section class="sectionRestaurant">
+                <h3>Restaurants</h3>
+                <div class="allBoxes">
+                            <!-- restaurant 1 -->
+                    <a class="boxRestaurant bastille" href="">
+                        <div class="boxRestaurant_pic">
+                            <div class="picsBox">
+                                <img class="pictures" src="images/bastille.jpg" alt="restaurant-il-gusto">
+                            </div>
+                            <div class="newBox">Nouveau</div>             
                         </div>
-                        <div class="logoHeartBox">
-                            <i class="far fa-heart heartLogo"></i>
-                            <div class="ball">
-                                <div class="ball_heart ball_heart--1"></div>
-                                <div class="ball_heart ball_heart--2"></div>
-                                <div class="ball_heart ball_heart--3"></div>
+                        <div class="titleAndLike">
+                            <div>
+                                <p class="restaurantName">Bastille</p>
+                                <p>Paris</p>
+                            </div>
+                            <div class="logoHeartBox">
+                                <i class="far fa-heart heartLogo"></i>
+                                <div class="ball">
+                                    <div class="ball_heart ball_heart--1"></div>
+                                    <div class="ball_heart ball_heart--2"></div>
+                                    <div class="ball_heart ball_heart--3"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                        <!-- restaurant 2 -->
-                <a class="boxRestaurant" href="">
-                    <div class="boxRestaurant_pic">
-                        <div class="picsBox">
-                            <img class="pictures" src="images/symphonie.jpg" alt="restaurant-symphonie">
+                    </a>
+                            <!-- restaurant 2 -->
+                    <a class="boxRestaurant symphonie" href="Symphonie/index.html">
+                        <div class="boxRestaurant_pic">
+                            <div class="picsBox">
+                                <img class="pictures" src="images/symphonie.jpg" alt="restaurant-symphonie">
+                            </div>
+                            <div class="newBox">Nouveau</div>             
                         </div>
-                    </div>
-                    <div class="titleAndLike">
-                        <div>
-                            <p class="restaurantName">Symphonie</p>
-                            <p>Paris,16ème</p>
-                        </div>
-                        <div class="logoHeartBox">
-                            <i class="far fa-heart heartLogo"></i>
-                            <div class="ball">
-                                <div class="ball_heart ball_heart--1"></div>
-                                <div class="ball_heart ball_heart--2"></div>
-                                <div class="ball_heart ball_heart--3"></div>
+                        <div class="titleAndLike">
+                            <div>
+                                <p class="restaurantName">Symphonie</p>
+                                <p>Paris</p>
+                            </div>
+                            <div class="logoHeartBox">
+                                <i class="far fa-heart heartLogo"></i>
+                                <div class="ball">
+                                    <div class="ball_heart ball_heart--1"></div>
+                                    <div class="ball_heart ball_heart--2"></div>
+                                    <div class="ball_heart ball_heart--3"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                        <!-- restaurant 3 -->
-                <a class="boxRestaurant" href="">
-                    <div class="boxRestaurant_pic">
-                        <div class="picsBox">
-                            <img  class="pictures" src="images/enchantee.jpg" alt="restaurant-l-assiette-enchantee">
-                        </div>
-                    </div>
-                    <div class="titleAndLike">
-                        <div>
-                            <p class="restaurantName">L'assiette Enchantée</p>
-                            <p>Paris,20ème</p>
-                        </div>
-                        <div class="logoHeartBox">
-                            <i class="far fa-heart heartLogo"></i>
-                            <div class="ball">
-                                <div class="ball_heart ball_heart--1"></div>
-                                <div class="ball_heart ball_heart--2"></div>
-                                <div class="ball_heart ball_heart--3"></div>
+                    </a>
+                            <!-- restaurant 3 -->
+                    <a class="boxRestaurant enchantee" href="La Fontaine Bourbon/index.html">
+                        <div class="boxRestaurant_pic">
+                            <div class="picsBox">
+                                <img  class="pictures" src="images/enchantee.jpg" alt="restaurant-la-fontaine-bourbon">
                             </div>
                         </div>
-                    </div>
-                </a>
-                        <!-- restaurant 4 -->
-                <a class="boxRestaurant" href="">
-                    <div class="boxRestaurant_pic">
-                        <div class="picsBox">
-                            <img  class="pictures" src="images/gourmand.jpg" alt="restaurant-le-gourmand">
-                        </div>
-                    </div>
-                    <div class="titleAndLike">
-                        <div>
-                            <p class="restaurantName">Le Gourmand</p>
-                            <p>Paris,8ème</p>
-                        </div>
-                        <div class="logoHeartBox">
-                            <i class="far fa-heart heartLogo"></i>
-                            <div class="ball">
-                                <div class="ball_heart ball_heart--1"></div>
-                                <div class="ball_heart ball_heart--2"></div>
-                                <div class="ball_heart ball_heart--3"></div>
+                        <div class="titleAndLike">
+                            <div>
+                                <p class="restaurantName">L'assiette Enchantée</p>
+                                <p>Paris</p>
+                            </div>
+                            <div class="logoHeartBox">
+                                <i class="far fa-heart heartLogo"></i>
+                                <div class="ball">
+                                    <div class="ball_heart ball_heart--1"></div>
+                                    <div class="ball_heart ball_heart--2"></div>
+                                    <div class="ball_heart ball_heart--3"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- footer -->
-        <footer>
-            <h4 class="titleFooter colorText">ohmyfood</h4>
-            <div class="textBox">
-                <div>
-                    <a href="" class="boxLogo">
-                        <div ><i class="fas fa-utensils colorText uniqueLogo"></i></div>
-                        <div class="colorText">Suggerez un restaurant</div>
+                    </a>
+                            <!-- restaurant 4 -->
+                    <a class="boxRestaurant gourmand" href="">
+                        <div class="boxRestaurant_pic">
+                            <div class="picsBox">
+                                <img  class="pictures" src="images/gourmand.jpg" alt="restaurant-b-concept">
+                            </div>
+                        </div>
+                        <div class="titleAndLike">
+                            <div>
+                                <p class="restaurantName">Le Gourmand</p>
+                                <p>Paris</p>
+                            </div>
+                            <div class="logoHeartBox">
+                                <i class="far fa-heart heartLogo"></i>
+                                <div class="ball">
+                                    <div class="ball_heart ball_heart--1"></div>
+                                    <div class="ball_heart ball_heart--2"></div>
+                                    <div class="ball_heart ball_heart--3"></div>
+                                </div>
+                            </div>
+                        </div>
                     </a>
                 </div>
-                <div>
-                    <a href="" class="boxLogo">
-                        <div><i class="fas fa-hands-helping colorText"></i></div>
-                        <div class="colorText">Devenez partenaire</div>
-                    </a>
+            </section>
+
+            <!-- footer -->
+            <footer>
+                <h4 class="titleFooter colorText">ohmyfood</h4>
+                <div class="textBox">
+                    <div>
+                        <a href="" class="boxLogo">
+                            <div ><i class="fas fa-utensils colorText uniqueLogo"></i></div>
+                            <div class="colorText">Suggérez un restaurant</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="boxLogo">
+                            <div><i class="fas fa-hands-helping colorText"></i></div>
+                            <div class="colorText">Devenez partenaire</div>
+                        </a>
+                    </div>
+                    <a href=""><div class="colorText">Mentions légales</div></a>
+                    <a href=""><div class="colorText">Contact</div></a>
                 </div>
-                <a href=""><div class="colorText">Mentions légales</div></a>
-                <a href=""><div class="colorText">Contact</div></a>
+            </footer>
+        </div>
+
+        <div class="container">
+            <div class="load">
+                <div class="load__pepper load__pepper--1"><i class="fas fa-pepper-hot pepper"></i></div>
+                <div class="load__pepper load__pepper--2"><i class="fas fa-pepper-hot pepper"></i></div>
+                <div class="load__pepper load__pepper--3"><i class="fas fa-pepper-hot pepper"></i></div>
             </div>
-        </footer>
+        </div>
 
     </body>
-
 </html>
