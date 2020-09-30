@@ -251,7 +251,8 @@ h2{
 .article{
     display: flex;
     justify-content: space-around;
-    height: 450px;
+    height: auto;
+    margin-bottom: 20px;
     width: 100%;
 }
 .boldMeal{
@@ -452,7 +453,6 @@ h2{
             }
         }
     }
-
 }
 @media screen and ( min-width: 767px) and ( max-width: 940px){
     h3{
