@@ -57,6 +57,7 @@ h1 {
 /* main */
 /* main */
 /* picture */
+/* picture */
 .pic {
   width: 100%;
   height: 500px;
@@ -73,7 +74,6 @@ h1 {
     height: 600px;
   }
 }
-/* article */
 /* article */
 /* article */
 /* title box */
@@ -103,12 +103,11 @@ h2 {
   top: 5px;
   width: 70px;
 }
-
-.heartLogo {
+.logoHeartBox .heartLogo {
   font-size: 30px;
 }
-
-.ball {
+.logoHeartBox .ball {
+  /* forment le coeur animé */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,24 +115,29 @@ h2 {
   height: 90px;
   border-radius: 50%;
   transform: scale(0.5);
+  /* taille du coeur violet à 0.5 */
   opacity: 0;
+  /* avec une visibilité à 0 */
   transition: transform 700ms;
+  /* animation à 0.7s */
   position: relative;
   bottom: 59px;
   right: 30px;
 }
-.ball:hover {
+.logoHeartBox .ball:hover {
   transform: scale(1);
+  /* s'agrandit à sa taille initiale */
   opacity: 1;
+  /* et visible en :hover */
   cursor: pointer;
 }
-.ball_heart {
+.logoHeartBox .ball_heart {
   width: 18px;
   height: 18px;
   border-radius: 50%;
   background-color: #9356DC;
 }
-.ball_heart--1 {
+.logoHeartBox .ball_heart--1 {
   /*circle*/
   position: relative;
   z-index: 2;
@@ -141,13 +145,13 @@ h2 {
   bottom: 6px;
   background: linear-gradient(#FF79DA, #9356DC);
 }
-.ball_heart--2 {
+.logoHeartBox .ball_heart--2 {
   /*carré*/
   border-radius: 0;
   transform: rotate(45deg);
   z-index: 1;
 }
-.ball_heart--3 {
+.logoHeartBox .ball_heart--3 {
   /*circle*/
   position: relative;
   z-index: 3;
@@ -284,7 +288,7 @@ h2 {
   border-radius: 20px;
   display: flex;
   animation: box-moving 1200ms;
-  /*délai de 600ms pour une durée d'1s*/
+  /* animation une durée d'1.2s */
 }
 .choiceBox:hover {
   cursor: pointer;
@@ -294,22 +298,24 @@ h2 {
 }
 .choiceBox:hover .validateBox--dots {
   opacity: 1;
+  /* "..." visible en :hover */
 }
 .choiceBox:hover .logo_validate {
   transform: rotate(1turn);
+  /* logo fait un tour */
 }
 
 @keyframes box-moving {
   0% {
     transform: translateY(15px);
-    /*remonte de 15px*/
+    /* monte de 15px */
     opacity: 0;
   }
   100% {
     transform: translateY(0px);
-    /*reste au bon endroit*/
+    /* puis position initiale*/
     opacity: 1;
-    /*invisible au début puis apparait progressivement*/
+    /* invisible au début puis apparait progressivement */
   }
 }
 .textBoxMenu {
@@ -331,11 +337,17 @@ h2 {
   display: flex;
   align-items: flex-end;
   width: 150px;
+  /* si choiceBox=300px et validateBox=150px... */
   position: relative;
+  /*alors position left=150px (choiceBox-validateBox) */
   left: 150px;
   z-index: 2;
+  /* se place au dessus de textBoxMenu */
   transform: translateX(70px);
+  /* taille identique à celle du logo... */
   transform-origin: left;
+  /* donc logo sort de la boite mais non visible... */
+  /* puis se déplacera vers la gauche en revenant à sa position initiale(translateX(0px)(cf: :hover) */
   transition: all 600ms;
 }
 .validateBox--dots {
@@ -361,7 +373,7 @@ h2 {
   align-items: center;
   width: 70px;
   height: 80px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: white;
   font-size: 30px;
 }
@@ -380,7 +392,7 @@ h2 {
     margin-bottom: 50px;
   }
   .article .sizeBoxMeal .boldMeal {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 540px) and (max-width: 767px) {
