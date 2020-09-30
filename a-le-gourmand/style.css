@@ -1,0 +1,644 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "shrikhand.regular";
+  src: url("../Fonts/shrikhand.regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../Fonts/Roboto-Light.ttf");
+}
+/* mixins */
+/* reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Roboto-Light";
+}
+
+/* header */
+/* header */
+/* header */
+header {
+  display: flex;
+  font-family: "shrikhand.regular", Arial, Helvetica, sans-serif;
+}
+header .arrow {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  width: 2%;
+  padding-left: 20px;
+}
+
+h1 {
+  width: 98%;
+  font-size: 60px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  header .arrow {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+/* main */
+/* main */
+/* main */
+/* picture */
+/* picture */
+.pic {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.pic img {
+  position: relative;
+  bottom: 70px;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 540px) and (max-width: 700px) {
+  .pic {
+    height: 600px;
+  }
+}
+/* article */
+/* article */
+/* title box */
+.section {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  bottom: 30px;
+}
+.section .menuTitle {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  height: 60px;
+}
+
+h2 {
+  font-family: "shrikhand.regular";
+  font-size: 30px;
+}
+
+/* heart box */
+.logoHeartBox {
+  position: relative;
+  top: 5px;
+  width: 70px;
+}
+.logoHeartBox .heartLogo {
+  font-size: 30px;
+}
+.logoHeartBox .ball {
+  /* forment le coeur animé */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  transform: scale(0.5);
+  /* taille du coeur violet à 0.5 */
+  opacity: 0;
+  /* avec une visibilité à 0 */
+  transition: transform 700ms;
+  /* animation à 0.7s */
+  position: relative;
+  bottom: 59px;
+  right: 30px;
+}
+.logoHeartBox .ball:hover {
+  transform: scale(1);
+  /* s'agrandit à sa taille initiale */
+  opacity: 1;
+  /* et visible en :hover */
+  cursor: pointer;
+}
+.logoHeartBox .ball_heart {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #9356DC;
+}
+.logoHeartBox .ball_heart--1 {
+  /*circle*/
+  position: relative;
+  z-index: 2;
+  left: 12px;
+  bottom: 6px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+.logoHeartBox .ball_heart--2 {
+  /*carré*/
+  border-radius: 0;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.logoHeartBox .ball_heart--3 {
+  /*circle*/
+  position: relative;
+  z-index: 3;
+  right: 12px;
+  bottom: 6px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    bottom: 350px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .menuTitle {
+    margin-bottom: 20px;
+  }
+  .menuTitle .logoHeartBox {
+    position: relative;
+    top: 6px;
+    width: 50px;
+  }
+  .menuTitle .logoHeartBox .heartLogo {
+    font-size: 22px;
+  }
+  .menuTitle .logoHeartBox .ball {
+    right: 34px;
+    bottom: 57px;
+  }
+  .menuTitle .logoHeartBox .ball_heart {
+    width: 14px;
+    height: 14px;
+  }
+  .menuTitle .logoHeartBox .ball_heart--1 {
+    left: 10px;
+    bottom: 4px;
+  }
+  .menuTitle .logoHeartBox .ball_heart--3 {
+    right: 10px;
+    bottom: 4px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .section {
+    bottom: 300px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 768px) {
+  .section {
+    bottom: 150px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .section {
+    bottom: 100px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .menuTitle {
+    margin-bottom: 30px;
+  }
+  .menuTitle .logoHeartBox {
+    position: relative;
+    top: 8px;
+    width: 50px;
+  }
+  .menuTitle .logoHeartBox .heartLogo {
+    font-size: 25px;
+  }
+  .menuTitle .logoHeartBox .ball {
+    right: 33px;
+    bottom: 58px;
+  }
+  .menuTitle .logoHeartBox .ball_heart {
+    width: 16px;
+    height: 16px;
+  }
+  .menuTitle .logoHeartBox .ball_heart--1 {
+    left: 11px;
+    bottom: 5px;
+  }
+  .menuTitle .logoHeartBox .ball_heart--3 {
+    right: 11px;
+    bottom: 5px;
+  }
+}
+/* all menus */
+.article {
+  display: flex;
+  justify-content: space-around;
+  height: 450px;
+  width: 100%;
+}
+
+.boldMeal {
+  font-weight: bold;
+}
+
+.sizeBoxMeal {
+  width: 300px;
+}
+.sizeBoxMeal h3 {
+  width: 50px;
+  border-bottom: 3px #99E2D0 solid;
+  padding-bottom: 20px;
+}
+.sizeBoxMeal .mealBoxWithoutTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choiceBox {
+  margin-top: 40px;
+  width: 300px;
+  height: 80px;
+  box-shadow: 2px 2px 6px grey;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  animation: box-moving 1200ms;
+  /* animation une durée d'1.2s */
+}
+.choiceBox:hover {
+  cursor: pointer;
+}
+.choiceBox:hover .validateBox {
+  transform: translateX(0px);
+}
+.choiceBox:hover .validateBox--dots {
+  opacity: 1;
+  /* "..." visible en :hover */
+}
+.choiceBox:hover .logo_validate {
+  transform: rotate(1turn);
+  /* logo fait un tour */
+}
+
+@keyframes box-moving {
+  0% {
+    transform: translateY(15px);
+    /* monte de 15px */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    /* puis position initiale*/
+    opacity: 1;
+    /* invisible au début puis apparait progressivement */
+  }
+}
+.textBoxMenu {
+  width: 250px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-top: 20px;
+  font-size: 16px;
+  position: absolute;
+  z-index: 1;
+}
+.textBoxMenu .boldMeal {
+  padding-bottom: 7px;
+}
+
+.validateBox {
+  display: flex;
+  align-items: flex-end;
+  width: 150px;
+  /* si choiceBox=300px et validateBox=150px... */
+  position: relative;
+  /*alors position left=150px (choiceBox-validateBox) */
+  left: 150px;
+  z-index: 2;
+  /* se place au dessus de textBoxMenu */
+  transform: translateX(70px);
+  /* taille identique à celle du logo... */
+  transform-origin: left;
+  /* donc logo sort de la boite mais non visible... */
+  /* puis se déplacera vers la gauche en revenant à sa position initiale(translateX(0px)(cf: :hover) */
+  transition: all 600ms;
+}
+.validateBox--dots {
+  background-color: white;
+  font-size: 20px;
+  width: 20px;
+  height: 48%;
+  opacity: 0;
+}
+.validateBox--price {
+  width: 60px;
+  height: 30%;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16px;
+  font-weight: bold;
+}
+.validateBox--logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 80px;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 30px;
+}
+.validateBox .logo_validate {
+  transition: transform 600ms;
+}
+
+@media screen and (max-width: 330px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .article .sizeBoxMeal {
+    margin-bottom: 50px;
+    width: 200px;
+  }
+
+  .choiceBox {
+    width: 200px;
+  }
+  .choiceBox .textBoxMenu {
+    font-size: 13px;
+    margin-left: 20px;
+  }
+  .choiceBox .textBoxMenu .boldMeal {
+    font-size: 14px;
+  }
+  .choiceBox .validateBox {
+    width: 100px;
+    font-size: 15px;
+    position: relative;
+    left: 100px;
+    transform: translateX(40px);
+  }
+  .choiceBox .validateBox--dots {
+    width: 20px;
+  }
+  .choiceBox .validateBox--price {
+    width: 40px;
+  }
+  .choiceBox .validateBox--logo {
+    font-size: 30px;
+    width: 40px;
+  }
+}
+@media screen and (min-width: 330px) and (max-width: 540px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .article .sizeBoxMeal {
+    margin-bottom: 50px;
+  }
+  .article .sizeBoxMeal .boldMeal {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .article .sizeBoxMeal {
+    margin-bottom: 50px;
+    width: 400px;
+  }
+
+  .choiceBox {
+    width: 400px;
+  }
+  .choiceBox .textBoxMenu {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+  .choiceBox .textBoxMenu .boldMeal {
+    font-size: 17px;
+  }
+  .choiceBox .validateBox {
+    width: 200px;
+    font-size: 15px;
+    position: relative;
+    left: 200px;
+    transform: translateX(75px);
+  }
+  .choiceBox .validateBox--dots {
+    width: 50px;
+  }
+  .choiceBox .validateBox--price {
+    width: 75px;
+  }
+  .choiceBox .validateBox--logo {
+    font-size: 30px;
+    width: 75px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 940px) {
+  h3 {
+    margin-left: 25px;
+  }
+
+  .choiceBox {
+    width: 240px;
+  }
+  .choiceBox .textBoxMenu {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .choiceBox .textBoxMenu .boldMeal {
+    font-size: 15px;
+  }
+  .choiceBox .validateBox {
+    width: 110px;
+    font-size: 14px;
+    position: relative;
+    left: 130px;
+    transform: translateX(45px);
+  }
+  .choiceBox .validateBox--dots {
+    width: 20px;
+    height: 54%;
+  }
+  .choiceBox .validateBox--price {
+    width: 45px;
+    padding-bottom: 20px;
+  }
+  .choiceBox .validateBox--logo {
+    font-size: 25px;
+    width: 45px;
+  }
+}
+/* button */
+.btnBox {
+  padding-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 60px;
+}
+.btnBox .btn {
+  width: 150px;
+  height: 40px;
+  margin-right: 40px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  border: #9356DC;
+  box-shadow: 2px 2px 6px grey;
+  color: white;
+  font-family: "Roboto-Light";
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+}
+.btnBox .btn:hover {
+  cursor: pointer;
+}
+.btnBox .btn:hover::after {
+  opacity: 1;
+}
+.btnBox .btn::after {
+  /* création d'un nouvel élément */
+  content: "";
+  /* pour éclaircir au hover */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 30px;
+  box-shadow: 2px 2px 6px #757373;
+  background: linear-gradient(#ff93e1, #a16be0);
+  transition: opacity 250ms;
+}
+
+@media screen and (max-width: 767px) {
+  .btnBox {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+/* footer*/
+/* footer*/
+/* footer*/
+footer {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 20px;
+  height: 120px;
+  background-color: #353535;
+}
+footer .titleFooter {
+  font-family: "shrikhand.regular";
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+footer .textBox {
+  display: flex;
+  justify-content: space-between;
+}
+footer .boxLogo {
+  display: flex;
+}
+footer .colorText {
+  color: white;
+  margin-right: 10px;
+}
+footer .uniqueLogo {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: 220px;
+    padding-bottom: 20px;
+    position: relative;
+    bottom: 350px;
+  }
+  footer .textBox {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  footer {
+    height: 220px;
+    padding-bottom: 20px;
+    position: relative;
+    bottom: 300px;
+  }
+  footer .textBox {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 767px) {
+  footer {
+    height: 220px;
+    padding-bottom: 20px;
+    position: relative;
+    bottom: 150px;
+  }
+  footer .textBox {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  footer {
+    position: relative;
+    bottom: 60px;
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
