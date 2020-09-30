@@ -39,12 +39,17 @@ header .inputBox::before {
   font-family: FontAwesome;
   font-size: 22px;
   position: absolute;
-  top: 12%;
+  top: 80px;
   left: 40%;
   color: #4b4848;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 430px) {
+  header .inputBox::before {
+    left: 20%;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 550px) {
   header .inputBox::before {
     left: 25%;
   }
@@ -71,9 +76,6 @@ header .inputBox::before {
   align-items: center;
   width: 60%;
   background-color: #f6f6f6;
-}
-.explainSection_button .introText {
-  height: 40%;
 }
 .explainSection_button .introText h1 {
   margin-bottom: 30px;
@@ -161,7 +163,7 @@ header .inputBox::before {
   transition: opacity 250ms;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
   .explainSection {
     display: flex;
     flex-direction: column;
@@ -172,7 +174,7 @@ header .inputBox::before {
     height: 300px;
   }
   .explainSection_button .introText {
-    height: 100px;
+    height: auto;
   }
   .explainSection_text {
     width: 100%;
@@ -497,6 +499,7 @@ footer .uniqueLogo {
   bottom: 700px;
   z-index: -1;
   animation: disappear 3s;
+  transform: scale(0);
 }
 
 .load {
