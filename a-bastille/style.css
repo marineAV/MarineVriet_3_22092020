@@ -289,18 +289,16 @@ h2 {
   display: flex;
   animation: box-moving 1200ms;
   /* animation une durée d'1.2s */
-}
-.choiceBox:hover {
   cursor: pointer;
 }
-.choiceBox:hover .validateBox {
+.choiceBox:active .validateBox {
   transform: translateX(0px);
 }
-.choiceBox:hover .validateBox--dots {
+.choiceBox:active .validateBox--dots {
   opacity: 1;
   /* "..." visible en :hover */
 }
-.choiceBox:hover .logo_validate {
+.choiceBox:active .logo_validate {
   transform: rotate(1turn);
   /* logo fait un tour */
 }

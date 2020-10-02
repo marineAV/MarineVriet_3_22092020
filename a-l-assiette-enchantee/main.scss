@@ -281,8 +281,8 @@ h2{
     border-radius: 20px;
     display: flex;
     animation: box-moving 1200ms;   /* animation une durée d'1.2s */
-    &:hover{
-        cursor: pointer;
+    cursor: pointer;
+    &:active{
         .validateBox{
             transform: translateX(0px);
             &--dots{
