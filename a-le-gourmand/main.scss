@@ -280,6 +280,7 @@ h2{
     border-radius: 20px;
     display: flex;
     animation: box-moving 1200ms;   /* animation une durée d'1.2s */
+    touch-action: auto;
     &:hover{
         cursor: pointer;
         .validateBox{
