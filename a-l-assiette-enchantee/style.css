@@ -292,14 +292,14 @@ h2 {
   /* animation une durée d'1.2s */
   cursor: pointer;
 }
-.choiceBox:active .validateBox {
+.choiceBox:hover .validateBox {
   transform: translateX(0px);
 }
-.choiceBox:active .validateBox--dots {
+.choiceBox:hover .validateBox--dots {
   opacity: 1;
   /* "..." visible en :hover */
 }
-.choiceBox:active .logo_validate {
+.choiceBox:hover .logo_validate {
   transform: rotate(1turn);
   /* logo fait un tour */
 }

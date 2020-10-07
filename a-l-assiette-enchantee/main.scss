@@ -282,7 +282,7 @@ h2{
     display: flex;
     animation: box-moving 1200ms;   /* animation une durée d'1.2s */
     cursor: pointer;
-    &:active{
+    &:hover{
         .validateBox{
             transform: translateX(0px);
             &--dots{

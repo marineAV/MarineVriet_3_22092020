@@ -475,7 +475,9 @@ footer .uniqueLogo {
 /* loading spinner hot peppper */
 .threeSecondsAfter {
   animation: appearance 3s;
+  /* la page apparait ...*/
   z-index: 1;
+  /* ...au bout de 3s */
 }
 
 @keyframes appearance {
@@ -490,6 +492,7 @@ footer .uniqueLogo {
   }
 }
 .container {
+  /* = animation */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -499,6 +502,7 @@ footer .uniqueLogo {
   bottom: 700px;
   z-index: -1;
   animation: disappear 3s;
+  /* disparait lorsque la page réapparait */
   transform: scale(0);
 }
 
@@ -511,14 +515,21 @@ footer .uniqueLogo {
 .load__pepper {
   animation: peppers 700ms backwards infinite;
   animation-direction: alternate;
+  /* repart dans l'autre sens plutot que son point de départ */
+  /* ...délai d'animation de 350s entre chaque anim de logo */
+  /* ...délai d'animation de 350s entre chaque anim de logo */
+  /* ...délai d'animation de 350s entre chaque anim de logo */
 }
 .load__pepper--1 {
+  /* création d'une boucle afin que chaque logo ait un...*/
   animation-delay: 350ms;
 }
 .load__pepper--2 {
+  /* création d'une boucle afin que chaque logo ait un...*/
   animation-delay: 700ms;
 }
 .load__pepper--3 {
+  /* création d'une boucle afin que chaque logo ait un...*/
   animation-delay: 1050ms;
 }
 .load__pepper .pepper {
@@ -526,7 +537,9 @@ footer .uniqueLogo {
 }
 
 @keyframes peppers {
+  /* l'animation s'agrandit à sa valeurinitiale depuis..*/
   0% {
+    /*...une taille de départ de 0.3*/
     transform: scale(0.3);
   }
   100% {

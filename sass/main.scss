@@ -482,8 +482,8 @@ footer{
 
 /* loading spinner hot peppper */
 .threeSecondsAfter{
-    animation: appearance 3s;
-    z-index: 1;
+    animation: appearance 3s; /* la page apparait ...*/
+    z-index: 1;             /* ...au bout de 3s */
 
 }
 @keyframes appearance{
@@ -497,7 +497,7 @@ footer{
         opacity: 1;
     }
 }
-.container{
+.container{     /* = animation */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -506,7 +506,7 @@ footer{
     position: relative;
     bottom: 700px;
     z-index: -1;
-    animation: disappear 3s;
+    animation: disappear 3s; /* disparait lorsque la page réapparait */ 
     transform: scale(0);
 }
 .load{
@@ -516,19 +516,19 @@ footer{
     font-size: 50px;
     &__pepper{
         animation: peppers 700ms backwards infinite;
-        animation-direction: alternate;
+        animation-direction: alternate; /* repart dans l'autre sens plutot que son point de départ */
         @for $i from 1 through 3{
-            &--#{$i} {
+            &--#{$i} {      /* création d'une boucle afin que chaque logo ait un...*/     
                 animation-delay: 350ms * $i;
-            }
+            }               /* ...délai d'animation de 350s entre chaque anim de logo */
         }
         .pepper{
             color: rgb(163, 22, 22);
         }
     }
 }
-@keyframes peppers {
-    0% {
+@keyframes peppers { /* l'animation s'agrandit à sa valeurinitiale depuis..*/
+    0% {                /*...une taille de départ de 0.3*/
         transform: scale(0.3);
     }
     100% {
